@@ -13,6 +13,21 @@
 - [ ] XML output parser and re-entry into database (Zach)
 
 - [ ] Search...
-  - [ ] Sub stuff goes here
+  - [ ] substring change count
+  - [ ] more stuff
 
 - [ ] Google slides
+
+- [ ] Web something?
+
+- [ ] designer pitch
+
+- [ ] memoization + caching
+
+
+# Presentation content
+
+- Stuff to print for each step:
+  - Gene used
+  - Enzyme used
+  - Coordinate of enzyme usage

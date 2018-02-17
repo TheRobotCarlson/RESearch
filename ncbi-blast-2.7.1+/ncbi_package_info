@@ -1,0 +1,211 @@
+PACKAGE_NAME: blast
+PACKAGE_VERSION: 2.7.1
+PACKAGE_SIGNATURE: MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+PACKAGE_CONFIG: Win64 : plain : vs2013 static 64 ReleaseDLL
+
+>>>>>  blastp.exe
+
+blastp: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blastn.exe
+
+blastn: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blastx.exe
+
+blastx: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  tblastn.exe
+
+tblastn: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  tblastx.exe
+
+tblastx: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  psiblast.exe
+
+psiblast: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  rpsblast.exe
+
+rpsblast: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  rpstblastn.exe
+
+rpstblastn: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  makembindex.exe
+
+makembindex: 0.0.0
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  segmasker.exe
+
+segmasker: 1.0.0
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  dustmasker.exe
+
+dustmasker: 1.0.0
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  windowmasker.exe
+
+windowmasker: 1.0.0
+ window-masker-algorithm:1.0.0
+ windowmasker-statistics-algorithm-version:1.0.0
+ windowmasker-statistics-format-version:ascii 1.0.0
+ windowmasker-statistics-format-version:binary 1.0.0
+ windowmasker-statistics-format-version:oascii 1.0.0
+ windowmasker-statistics-format-version:obinary 1.0.0
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  deltablast.exe
+
+deltablast: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  makeblastdb.exe
+
+makeblastdb: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blastdbcmd.exe
+
+blastdbcmd: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blastdb_aliastool.exe
+
+blastdb_aliastool: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  convert2blastmask.exe
+
+convert2blastmask: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blastdbcheck.exe
+
+blastdbcheck: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  makeprofiledb.exe
+
+makeprofiledb: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
+>>>>>  blast_formatter.exe
+
+blast_formatter: 2.7.1+
+ Package: blast 2.7.1, build Oct 18 2017 19:55:35
+ Package-Config:  vs2013 static  64  ReleaseDLL
+ Build-Signature:  MSVC_1200-ReleaseDLLMT--i386-pc-x64-MSCOREMAKE202
+ Build-Date:  Oct 18 2017 19:55:35
+
+
+
