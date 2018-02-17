@@ -1,5 +1,15 @@
 import xml.etree.ElementTree as et
 import re
+import blast
+import sys
+
+CHUNK = 10
+
+
+def main():
+    target = sys.stdin.read()
+    chunk = target[:CHUNK]
+    blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
 
 
 def xml_parse():
@@ -70,3 +80,17 @@ def cluster_enzymes(li):
                 d[end].append(enzyme)
                 break
     return d
+
+
+def png_to_binary(img_path):
+    with open(img_path, 'rb') as img_f:
+        img = img_f.read()
+        img_ba = [ord(c) for c in img]
+
+    print(img_ba[0])
+
+    return img_ba
+
+
+if __name__ == "__main__":
+    main()
