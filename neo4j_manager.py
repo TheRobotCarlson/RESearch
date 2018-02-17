@@ -25,8 +25,7 @@ for res in graph.data("MATCH (c) RETURN c LIMIT 4"):
 pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
          'G^A', 'G^C', 'G^G', 'G^T', 'T^A', 'T^C', 'T^G', 'T^T']
 
-pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
-         'G^A', 'G^C', 'G^G', 'G^T', 'T^A', 'T^C', 'T^G', 'T^T']
+pairs_second_tier = ['C^CA', 'AC^C', 'AC^G', 'C^GA']
 
 for pair in pairs:
     parent = Node("rebase_enzyme")
