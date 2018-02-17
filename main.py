@@ -2,6 +2,7 @@ import xml.etree.ElementTree as et
 import re
 import blast
 import sys
+import os
 
 CHUNK = 10
 
@@ -25,8 +26,23 @@ def xml_parse():
     for r in hits:
         result = r.find('Hit_hsps').find('Hsp').find('Hsp_hseq')
         gene = r.find('Hit_id').text
-        results.append((gene, result.text))
+        results.append((gene, result.text, fasta_parse(result.text, 'AWRI1631_ABSV01000000_cds.fsa')))
+
     return results
+
+
+def fasta_parse(seq_id, fasta_path):
+    with open(fasta_path, 'r') as fasta_file:
+        fasta_str = fasta_file.read()
+        fasta_file.close()
+
+    fasta_entries = fasta_str.split('\n>')
+    entry_str = [entry for entry in fasta_entries if seq_id in entry][0]
+
+    seq_lines = entry_str.split('\n')
+    entry_seq = "".join(seq_lines)
+
+    return entry_seq
 
 
 def cluster_enzymes(li):
