@@ -4,17 +4,17 @@
 
 - [ ] GeneBank and ReBase local storage solutions
 
-- [ ] General binary value to DNA Encoder (David)
+- [x] General binary value to DNA Encoder (David)
 
-- [ ] General DNA to binary value Decoder (David)
+- [x] General DNA to binary value Decoder (David)
 
 - [x] BLAST Subprocess caller for similarity (Christian)
   - [ ] may require clean up
 
-- [ ] XML output parser and re-entry into database (Zach)
+- [x] XML output parser and re-entry into database (Zach)
 
 - [ ] Search...
-  - [ ] substring change count
+  - [x] substring change count
   - [ ] find initial mtch/config
   - [ ] stochastically optimize
   - [ ] more stuff
