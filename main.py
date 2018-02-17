@@ -10,8 +10,9 @@ def xml_parse():
     results = []
     for r in hits:
         result = r.find('Hit_hsps').find('Hsp').find('Hsp_hseq')
-        gene = r.find('Hit_def').text
-        return (gene, result.text)
+        gene = r.find('Hit_id').text
+        results.append((gene, result.text))
+    return results
 
 
 def gene_search(seq, pat, end=0):
