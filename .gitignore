@@ -95,3 +95,9 @@ celerybeat-schedule
 
 # mypy
 .mypy_cache/
+.idea/markdown-navigator/profiles_settings.xml
+.idea/markdown-navigator.xml
+.idea/misc.xml
+.idea/RESearch.iml
+.idea/workspace.xml
+.idea/modules.xml
