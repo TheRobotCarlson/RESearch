@@ -26,3 +26,7 @@
 
 # Presentation content
 
+- Stuff to print for each step:
+  - Gene used
+  - Enzyme used
+  - Coordinate of enzyme usage
