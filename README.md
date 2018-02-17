@@ -1,18 +1,16 @@
 # Task list
 
-- [ ] ReBase parser
-
-- [ ] GeneBank parser
+- [ ] ReBase parser (Brian)
 
 - [ ] GeneBank and ReBase local storage solutions
 
-- [ ] General binary value to DNA Encoder
+- [ ] General binary value to DNA Encoder (David)
 
-- [ ] General DNA to binary value Decoder
+- [ ] General DNA to binary value Decoder (David)
 
-- [ ] BLAST Subprocess caller for similarity
+- [ ] BLAST Subprocess caller for similarity (Christian)
 
-- [ ] XML output parser and re-entry into database
+- [ ] XML output parser and re-entry into database (Zach)
 
 - [ ] Search...
   - [ ] Sub stuff goes here
