@@ -4,20 +4,30 @@ import blast
 import sys
 import os
 
-CHUNK = 10
-
 
 def main():
-    data = sys.stdin.read()
+    CHUNK = 10
+    # data = sys.stdin.read()
+    data = []
     counter = CHUNK
     end = len(data)
     dna_str = ""
     while counter < end + CHUNK:
         chunk = data[counter - CHUNK:counter]
         # blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
-        # PARSE XML
+        results = xml_parse()
+        print(results)
         counter += CHUNK
     print(dna_str)
+
+
+class Result:
+    def __init__(self):
+        self.hseq = None
+        self.hit_from = None
+        self.hit_to = None
+        self.id = None
+        self.gene = None
 
 
 def xml_parse():
@@ -27,9 +37,14 @@ def xml_parse():
     hits = iters.find('Iteration_hits').findall('Hit')
     results = []
     for r in hits:
-        result = r.find('Hit_hsps').find('Hsp').find('Hsp_hseq')
-        gene = r.find('Hit_id').text
-        results.append((gene, result.text, fasta_parse(result.text, 'AWRI1631_ABSV01000000_cds.fsa')))
+        res = Result()
+        result = r.find('Hit_hsps').find('Hsp')
+        res.hseq = result.find('Hsp_hseq').text
+        res.hit_from = int(result.find('Hsp_hit-from').text)
+        res.hit_to = int(result.find('Hsp_hit-to').text)
+        res.id = r.find('Hit_id').text
+        res.gene = fasta_parse(res.id, 'AWRI1631_ABSV01000000_cds.fsa')
+        results.append(res)
 
     return results
 
@@ -43,7 +58,7 @@ def fasta_parse(seq_id, fasta_path):
     entry_str = [entry for entry in fasta_entries if seq_id in entry][0]
 
     seq_lines = entry_str.split('\n')
-    entry_seq = "".join(seq_lines)
+    entry_seq = "".join(seq_lines[2:])
 
     return entry_seq
 
