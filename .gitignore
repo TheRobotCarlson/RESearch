@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
+uploads
 venv/
 # Distribution / packaging
 .Python
@@ -95,7 +96,17 @@ celerybeat-schedule
 
 # mypy
 .mypy_cache/
-.idea/modules.xml
+
+.idea/markdown-navigator/profiles_settings.xml
+.idea/markdown-navigator.xml
+.idea/misc.xml
 .idea/RESearch.iml
-.idea/vcs.xml
 .idea/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+
+
+
+
+
