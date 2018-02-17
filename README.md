@@ -20,3 +20,5 @@
 - [ ] Web something?
 
 - [ ] designer pitch
+
+- [ ] memoization + caching
