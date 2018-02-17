@@ -1,6 +1,5 @@
 import xml.etree.ElementTree as et
 import re
-import encoder
 
 
 def xml_parse():
@@ -71,17 +70,3 @@ def cluster_enzymes(li):
                 d[end].append(enzyme)
                 break
     return d
-
-
-def png_to_binary(img_path):
-    with open(img_path, 'rb') as img_f:
-        img = img_f.read()
-        img_ba = [ord(c) for c in img]
-
-    print(img_ba[0])
-
-    return img_ba
-
-
-if __name__ == '__main__':
-    print(encoder.encode(png_to_binary('hophackssquare.png')))
