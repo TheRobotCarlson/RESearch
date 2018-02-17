@@ -8,12 +8,15 @@
 
 - [ ] General DNA to binary value Decoder (David)
 
-- [ ] BLAST Subprocess caller for similarity (Christian)
+- [x] BLAST Subprocess caller for similarity (Christian)
+  - [ ] may require clean up
 
 - [ ] XML output parser and re-entry into database (Zach)
 
 - [ ] Search...
   - [ ] substring change count
+  - [ ] find initial mtch/config
+  - [ ] stochastically optimize
   - [ ] more stuff
 
 - [ ] Google slides
