@@ -101,3 +101,4 @@ celerybeat-schedule
 .idea/RESearch.iml
 .idea/workspace.xml
 .idea/modules.xml
+.idea/vcs.xml
