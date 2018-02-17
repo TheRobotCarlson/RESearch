@@ -95,3 +95,7 @@ celerybeat-schedule
 
 # mypy
 .mypy_cache/
+.idea/modules.xml
+.idea/RESearch.iml
+.idea/vcs.xml
+.idea/workspace.xml
