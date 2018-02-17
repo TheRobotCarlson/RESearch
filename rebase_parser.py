@@ -90,7 +90,7 @@ def expand_seqs(dna_entry):
 
 
 graph = Graph(password="pass")
-graph.schema.create_uniqueness_constraint("rebase_enzyme", "pattern")
+# graph.schema.create_uniqueness_constraint("rebase_enzyme", "pattern")
 uniques = set()
 time_begin = datetime.now()
 
@@ -128,7 +128,8 @@ with open('data_files/allenz.txt') as input_file:
                 entry_copy["regex"] = pattern_to_regex(seq)
                 entry_copy["real_enzyme"] = True
 
-                graph.merge(entry_copy)
+                if not graph.exists(entry_copy):
+                    graph.merge(entry_copy)
 
             temp_entry = {}
 
