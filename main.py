@@ -25,32 +25,32 @@ def xml_parse():
     return results
 
 
-def gene_search(seq, pat, end=0):
-    results = []
-    if end != 0:
-        seq = seq[:end+1]
-    pat = re.compile(pat)
-    return len(pat.findall(seq))
+# def gene_search(seq, pat, end=0):
+#     results = []
+#     if end != 0:
+#         seq = seq[:end+1]
+#     pat = re.compile(pat)
+#     return len(pat.findall(seq))
 
 
-def iterate(src, dst):
-    ''' 
-    Returns index of last letter before cut in genome should be made,
-    returns None of either string hits the end. 
-    '''
-    base_pairs = 0
-    wrong_pairs = 0
-    bp_threshold = 5
-    error_threshold = 0.25
+# def iterate(src, dst):
+#     '''
+#     Returns index of last letter before cut in genome should be made,
+#     returns None of either string hits the end.
+#     '''
+#     base_pairs = 0
+#     wrong_pairs = 0
+#     bp_threshold = 5
+#     error_threshold = 0.25
 
-    for x, y in zip(src, dst):
-        base_pairs += 1
-        if x != y:
-            wrong_pairs += 1
-            if (base_pairs >= bp_threshold and
-                    wrong_pairs / base_pairs >= error_threshold):
-                return base_pairs - 1
-    return None
+#     for x, y in zip(src, dst):
+#         base_pairs += 1
+#         if x != y:
+#             wrong_pairs += 1
+#             if (base_pairs >= bp_threshold and
+#                     wrong_pairs / base_pairs >= error_threshold):
+#                 return base_pairs - 1
+#     return None
 
 
 def cluster_enzymes(li):
