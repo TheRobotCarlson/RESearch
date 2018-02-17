@@ -133,9 +133,9 @@ with open('data_files/allenz.txt') as input_file:
 
             temp_entry = {}
 
-
-for res in graph.run("MATCH (n) RETURN n"):
-    print(res)
+#
+# for res in graph.run("MATCH (n) RETURN n"):
+#     print(res)
     # temp_str = result[1]
     #
     # search_pos = temp_str.find("^")
