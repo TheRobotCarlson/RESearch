@@ -43,7 +43,8 @@ def blast_n(fasta_str, save_path, database_filename):
     print(save_path)
 
     # creation of the blast command line
-    blastp_cline = subprocess.Popen(['C:/Users/Christian/Desktop/RESearch/ncbi-blast-2.7.1+/bin/blastn.exe', '-out', blast_output_file_path, '-outfmt', '5', '-query',
+    blastp_cline = subprocess.Popen(['C:/Users/Christian/Desktop/RESearch/ncbi-blast-2.7.1+/bin/blastn.exe', '-task',
+                                     'blastn-short', '-out', blast_output_file_path, '-outfmt', '5', '-query',
                                      save_path, '-db', database_filename], stdout=subprocess.PIPE)
 
     # calling of the blast command line and cleans up unnecessary files
