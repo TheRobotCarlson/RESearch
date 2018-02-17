@@ -14,7 +14,7 @@ def main():
     dna_str = ""
     while counter < end + CHUNK:
         chunk = data[counter - CHUNK:counter]
-        # blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
         results = xml_parse()
         print(results)
         counter += CHUNK
