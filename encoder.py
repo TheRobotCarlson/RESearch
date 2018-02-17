@@ -54,6 +54,3 @@ def decode(DNAString):
             byteValue += (4**j)*nucleobase_to_int(nucleobaseGroup[3-j])
         byteArray.append(byteValue.to_bytes(1, byteorder='big'))
     return byteArray
-
-
-encode(decode('ATGCATGC'))
