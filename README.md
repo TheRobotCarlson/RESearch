@@ -13,7 +13,8 @@
 - [ ] XML output parser and re-entry into database (Zach)
 
 - [ ] Search...
-  - [ ] Sub stuff goes here
+  - [ ] substring change count
+  - [ ] more stuff
 
 - [ ] Google slides
 
