@@ -2,18 +2,32 @@ import xml.etree.ElementTree as et
 import re
 import blast
 import sys
-
-CHUNK = 10
+import os
 
 
 def main():
-    data = sys.stdin.read()
-    counter = 0
+    CHUNK = 10
+    # data = sys.stdin.read()
+    data = []
+    counter = CHUNK
     end = len(data)
-    while counter < end:
-        chunk = data[:CHUNK]
-        blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
-        blast_results = xml_parse()
+    dna_str = ""
+    while counter < end + CHUNK:
+        chunk = data[counter - CHUNK:counter]
+        # blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        results = xml_parse()
+        print(results)
+        counter += CHUNK
+    print(dna_str)
+
+
+class Result:
+    def __init__(self):
+        self.hseq = None
+        self.hit_from = None
+        self.hit_to = None
+        self.id = None
+        self.gene = None
 
 
 def xml_parse():
@@ -23,10 +37,30 @@ def xml_parse():
     hits = iters.find('Iteration_hits').findall('Hit')
     results = []
     for r in hits:
-        result = r.find('Hit_hsps').find('Hsp').find('Hsp_hseq')
-        gene = r.find('Hit_id').text
-        results.append((gene, result.text))
+        res = Result()
+        result = r.find('Hit_hsps').find('Hsp')
+        res.hseq = result.find('Hsp_hseq').text
+        res.hit_from = int(result.find('Hsp_hit-from').text)
+        res.hit_to = int(result.find('Hsp_hit-to').text)
+        res.id = r.find('Hit_id').text
+        res.gene = fasta_parse(res.id, 'AWRI1631_ABSV01000000_cds.fsa')
+        results.append(res)
+
     return results
+
+
+def fasta_parse(seq_id, fasta_path):
+    with open(fasta_path, 'r') as fasta_file:
+        fasta_str = fasta_file.read()
+        fasta_file.close()
+
+    fasta_entries = fasta_str.split('\n>')
+    entry_str = [entry for entry in fasta_entries if seq_id in entry][0]
+
+    seq_lines = entry_str.split('\n')
+    entry_seq = "".join(seq_lines[2:])
+
+    return entry_seq
 
 
 def cluster_enzymes(li):
