@@ -18,3 +18,5 @@
 - [ ] Google slides
 
 - [ ] Web something?
+
+- [ ] designer pitch
