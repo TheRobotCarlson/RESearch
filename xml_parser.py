@@ -1,6 +1,10 @@
 import xml.etree.ElementTree as et
 
-root = et.parse("test.xml").getroot()
-stats = root.find('BlastOutput_iterations').find(
-    'Iteration').find('Iteration_stat')
-print(stats.text)
+iters = et.parse("fasta2.xml").getroot().find(
+    'BlastOutput_iterations').findall('Iteration')
+
+for item in iters:
+    hits = item.find('Iteration_hits').find('Hit')
+    result = hits.find('Hit_hsps').find('Hsp').find('Hsp_hseq')
+    print(result.text)
+    print(hits.find('Hit_def').text)
