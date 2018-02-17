@@ -85,7 +85,7 @@ def cluster_enzymes(li):
 def png_to_binary(img_path):
     with open(img_path, 'rb') as img_f:
         img = img_f.read()
-        img_ba = [ord(c) for c in img]
+        img_ba = bytes(img)
 
     print(img_ba[0])
 
