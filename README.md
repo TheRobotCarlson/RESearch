@@ -9,7 +9,7 @@
 - [ ] General DNA to binary value Decoder (David)
 
 - [x] BLAST Subprocess caller for similarity (Christian)
- - [ ] may require clean up
+  - [ ] may require clean up
 
 - [ ] XML output parser and re-entry into database (Zach)
 
