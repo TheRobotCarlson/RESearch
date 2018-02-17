@@ -22,3 +22,7 @@
 - [ ] designer pitch
 
 - [ ] memoization + caching
+
+
+# Presentation content
+
