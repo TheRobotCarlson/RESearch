@@ -82,5 +82,15 @@ def cluster_enzymes(li):
     return d
 
 
+def png_to_binary(img_path):
+    with open(img_path, 'rb') as img_f:
+        img = img_f.read()
+        img_ba = [ord(c) for c in img]
+
+    print(img_ba[0])
+
+    return img_ba
+
+
 if __name__ == "__main__":
     main()
