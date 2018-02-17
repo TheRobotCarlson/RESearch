@@ -15,6 +15,6 @@
 - [ ] XML output parser and re-entry into database
 
 - [ ] Search...
- - Sub stuff goes here
+ - [ ] Sub stuff goes here
 
 - [ ] Google slides
