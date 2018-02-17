@@ -8,12 +8,15 @@ CHUNK = 10
 
 def main():
     data = sys.stdin.read()
-    counter = 0
+    counter = CHUNK
     end = len(data)
-    while counter < end:
-        chunk = data[:CHUNK]
-        blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
-        blast_results = xml_parse()
+    dna_str = ""
+    while counter < end + CHUNK:
+        chunk = data[counter - CHUNK:counter]
+        # blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        # PARSE XML
+        counter += CHUNK
+    print(dna_str)
 
 
 def xml_parse():
