@@ -14,9 +14,15 @@ def main():
     dna_str = ""
     while counter < end + CHUNK:
         chunk = data[counter - CHUNK:counter]
-        # blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
         results = xml_parse()
-        print(results)
+
+        # ENZYME: (base_pair_string, name_string)
+
+        (bp, name) = get_enzyme()
+        print('Enzyme: ' + name + ' (' + bp + ')')
+        dna_str += results[0].hseq
+
         counter += CHUNK
     print(dna_str)
 
@@ -31,7 +37,7 @@ class Result:
 
 
 def xml_parse():
-    iters = et.parse("fasta2.xml").getroot().find(
+    iters = et.parse("fasta.xml").getroot().find(
         'BlastOutput_iterations').find('Iteration')
 
     hits = iters.find('Iteration_hits').findall('Hit')
