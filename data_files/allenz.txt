@@ -142,32 +142,6 @@
 <7>
 <8>2208
 
-<1>AbaAI
-<2>PvuRts1I
-<3>Acinetobacter baumannii AB900
-<4>M.D. Adams
-<5>C(11/9)
-<6>
-<7>
-<8>38,262
-
-<1>AbaBGI
-<2>PvuRts1I
-<3>Acinetobacter baumannii
-<4>ATCC 17978
-<5>C(11/9)
-<6>
-<7>
-<8>262,2687
-
-<1>AbaCI
-<2>PvuRts1I
-<3>Acinetobacter baumannii ATCC 19606
-<4>ATCC 19606
-<5>C(11/9)
-<6>
-<7>
-<8>262,799,3129
 
 <1>AbaCIII
 <2>
@@ -178,50 +152,6 @@
 <7>
 <8>94,799
 
-<1>AbaDI
-<2>PvuRts1I
-<3>Acinetobacter baumannii D1279779
-<4>D. Farrugia
-<5>C(11/9)
-<6>
-<7>
-<8>262,733
-
-<1>AbaHI
-<2>PvuRts1I
-<3>Acinetobacter baumannii AB210
-<4>R. Zarrilli
-<5>C(10/9)
-<6>
-<7>
-<8>262
-
-<1>AbaSI
-<2>PvuRts1I
-<3>Acinetobacter baumannii SDF
-<4>D. Vallenet
-<5>C(11/9)
-<6>
-<7>N
-<8>262
-
-<1>AbaTI
-<2>PvuRts1I
-<3>Acinetobacter baumannii MDR-TJ
-<4>F. Gao
-<5>C(11/9)
-<6>
-<7>
-<8>262,872
-
-<1>AbaUI
-<2>PvuRts1I
-<3>Acinetobacter baumannii UMB003
-<4>D. Rasko
-<5>C(11/9)
-<6>
-<7>
-<8>262,2500
 
 <1>AbaUMB2I
 <2>
@@ -294,15 +224,6 @@
 <6>
 <7>
 <8>327
-
-<1>AcaPI
-<2>PvuRts1I
-<3>Acinetobacter calcoaceticus PHEA-2
-<4>Y. Zhan
-<5>C(11/9)
-<6>
-<7>
-<8>262,3348
 
 <1>AccI
 <2>
@@ -3310,14 +3231,6 @@
 <7>
 <8>1314
 
-<1>BbiDI
-<2>PvuRts1I
-<3>Bifidobacterium bifidum
-<4>NCIMB 41171
-<5>C(10/9)
-<6>
-<7>
-<8>262,944
 
 <1>BboI
 <2>
@@ -5136,15 +5049,6 @@
 <6>
 <7>
 <8>394
-
-<1>BmeDI
-<2>PvuRts1I
-<3>Bacillus megaterium
-<4>DSM 319
-<5>C(2/0)
-<6>
-<7>
-<8>262,747
 
 <1>BmeRI
 <2>Eam1105I
@@ -13093,14 +12997,6 @@
 <7>
 <8>177,3331
 
-<1>CfrCI
-<2>PvuRts1I
-<3>Citrobacter freundii 4_7_47CFAA
-<4>A. Earl
-<5>C(11/9)
-<6>
-<7>
-<8>3390
 
 <1>M.Cfr101Dam
 <2>MboI
@@ -17997,24 +17893,6 @@
 <6>4(4)
 <7>
 <8>1965,1980
-
-<1>EsaMMI
-<2>PvuRts1I
-<3>Environmental sample, marine metagenome
-<4>J.C. Venter
-<5>C(11/9)
-<6>
-<7>
-<8>262,3304
-
-<1>EsaNI
-<2>PvuRts1I
-<3>Environmental sample, Newport Harbor RI
-<4>J.C. Venter
-<5>C(11/9)
-<6>
-<7>
-<8>262,3304
 
 <1>M.EsaSP1Dam
 <2>MboI
@@ -24478,14 +24356,6 @@
 <7>I
 <8>605
 
-<1>M.MpeI
-<2>M.SssI
-<3>Mycoplasma penetrans HF-2
-<4>Y. Sasaki
-<5>CG
-<6>?(5)
-<7>
-<8>2524,3202
 
 <1>MphI
 <2>EcoRII
@@ -24981,15 +24851,6 @@
 <6>
 <7>I
 <8>423
-
-<1>Mte37I
-<2>PvuRts1I
-<3>Microbacterium testaceum StLB037
-<4>T. Morohoshi
-<5>C(11/9)
-<6>
-<7>
-<8>262,1990
 
 <1>MthI
 <2>MboI
@@ -27655,14 +27516,6 @@
 <7>
 <8>2277
 
-<1>PatTI
-<2>PvuRts1I
-<3>Pseudoalteromonas atlantica T6c
-<4>A.C. Karls
-<5>C(11/9)
-<6>
-<7>
-<8>262,3390
 
 <1>PauI
 <2>BsePI
@@ -28123,14 +27976,6 @@
 <7>
 <8>1196
 
-<1>PfrCI
-<2>PvuRts1I
-<3>Propionibacterium freudenreichii subsp. shermanii CIRM-BIA1
-<4>V. Loux
-<5>C(11/9)
-<6>
-<7>
-<8>262,765
 
 <1>PfrJS2IV
 <2>PfrJS15III
@@ -28816,14 +28661,6 @@
 <7>
 <8>2233
 
-<1>PpeHI
-<2>PvuRts1I
-<3>Proteus penneri
-<4>ATCC 35198
-<5>C(11/9)
-<6>
-<7>
-<8>262,2794
 
 <1>Pph14I
 <2>HgiCI
@@ -29904,15 +29741,6 @@
 <6>
 <7>
 <8>1637
-
-<1>PxyI
-<2>PvuRts1I
-<3>Paraprevotella xylaniphila YIT 11841
-<4>DSM 19681T
-<5>C(11/9)
-<6>
-<7>
-<8>262,3149
 
 <1>PxyARI
 <2>EcoRV
@@ -41614,14 +41442,6 @@
 <7>
 <8>1914
 
-<1>YkrI
-<2>PvuRts1I
-<3>Yersinia kristensenii
-<4>ATCC 33638
-<5>C(10/9)
-<6>
-<7>
-<8>262
 
 <1>M.YpeDam
 <2>MboI

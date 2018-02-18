@@ -18,8 +18,10 @@ pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
 #     while pos_1 >= 0 and
 def get_root(graph):
     selector = NodeSelector(graph)
-    selected = selector.select("tree_node").where("NOT (a)<-[:containedby]-()")#get the only node in the set
-    return selected.first()# the bug says node has no attribute evaluate
+    selected = selector.select("tree_node").where("NOT (a)<-[:containedby]-()")  # get the only node in the set
+    return selected.first()  # the bug says node has no attribute evaluate
+
+
 def longest_common_substring(s1, s2):
    m = [[0] * (1 + len(s2)) for i in range(1 + len(s1))]
    longest, x_longest = 0, 0

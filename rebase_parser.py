@@ -6,6 +6,7 @@ import re
 
 from neo4j_manager import insert_node, label_word
 
+
 # M = A or C
 # W = A or T
 # H = not G (A or C or T)
@@ -93,70 +94,39 @@ def expand_seqs(dna_entry):
 
 
 graph = Graph(password="pass")
-# graph.schema.create_uniqueness_constraint(label_word, "pattern")
+graph.schema.create_uniqueness_constraint(label_word, "pattern")
 
-# pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
-#          'G^A', 'G^C', 'G^G', 'G^T', 'T^A', 'T^C', 'T^G', 'T^T']
-# for pair in pairs:
-#     parent = Node(label_word)
-#     parent["pattern"] = pair
-#     parent["real_enzyme"] = False
-#     graph.merge(parent)
+pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
+         'G^A', 'G^C', 'G^G', 'G^T', 'T^A', 'T^C', 'T^G', 'T^T']
+for pair in pairs:
+    parent = Node(label_word)
+    parent["pattern"] = pair
+    parent["real_enzyme"] = False
+    graph.merge(parent)
 uniques = set()
 time_begin = datetime.now()
 
-with open('data_files/allenz.txt') as input_file:
-    temp_entry = None
-    for line in input_file:
-        temp_str = line.strip()
-        clipped_str = temp_str[3:]
+with open('data_files/allenz_altered.txt') as input_file:
+    lines = input_file.readlines()
+    for line in lines:
+        line = line.strip('\n')
+        name, pattern = line.split(",")
+        node = Node(label_word)
+        node["name"] = name
+        node["pattern"] = pattern
+        node["real_enzyme"] = True
 
-        if temp_str[:3] == "<1>":
-            temp_entry = Node(label_word)
-            temp_entry["name"] = clipped_str
-        elif temp_str[:3] == "<5>":
-            cleave_num = clipped_str.find("(")
-
-            nums = None
-
-            if cleave_num != -1:
-                cleave_num_end = clipped_str.find(")")
-                nums = (clipped_str[cleave_num + 1:cleave_num_end]).split("/")
-                clipped_str = clipped_str[:cleave_num]
-
-            temp_entry["nums"] = nums
-
-            if "?" in clipped_str or "," in clipped_str:
+        seq_list = expand_seqs(pattern)
+        for seq in seq_list:
+            if seq in uniques:
                 continue
+            uniques.add(seq)
+            entry_copy = deepcopy(node)
+            entry_copy["pattern"] = seq
 
-            if len(clipped_str) > 10:
-                continue
+            if not graph.exists(entry_copy):
+                insert_node(entry_copy)
 
-            seq_list = expand_seqs(clipped_str)
-            for seq in seq_list:
-                if seq in uniques:
-                    continue
-                uniques.add(seq)
-                entry_copy = deepcopy(temp_entry)
-                entry_copy["pattern"] = seq
-                # entry_copy["regex"] = pattern_to_regex(seq)
-                entry_copy["real_enzyme"] = True
-
-                if not graph.exists(entry_copy):
-                # graph.merge(entry_copy)
-                    insert_node(entry_copy)
-
-            temp_entry = {}
-
-#
-# for res in graph.run("MATCH (n) RETURN n"):
-#     print(res)
-    # temp_str = result[1]
-    #
-    # search_pos = temp_str.find("^")
-    # if search_pos != -1:
-    #     result.append([-1, search_pos, -1])
-    # elif
 
 time_end = datetime.now()
 

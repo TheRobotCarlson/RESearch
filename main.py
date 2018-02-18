@@ -4,11 +4,13 @@ import blast
 import sys
 import os
 from neo4j_manager import get_enzyme
+from encoder import bits_to_nucleobase, encode
 
 
 def main():
     CHUNK = 10
-    data = 'TAAGGCTAGCTAGCTAGCTAGCTAGCTGATCGATCAGCTAGCTA'
+    data = encode(png_to_binary("data_files/visitlex_logo2.png"))
+    print(data)
     counter = CHUNK
     end = len(data)
     dna_str = ""
@@ -41,6 +43,7 @@ def main():
             print('got enzymes')
             print('Enzymes:\n  ' + name_left + '\n  ' + name_right)
             dna_str += results[i].hseq
+            print(dna_str)
         else:
             print("failed to find enzymes at this time")
             break
@@ -126,7 +129,7 @@ def png_to_binary(img_path):
         img = img_f.read()
         img_ba = bytes(img)
 
-    print(img_ba[0])
+    # print(img_ba[0])
 
     return img_ba
 

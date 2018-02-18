@@ -27,10 +27,10 @@
 <Iteration_hits>
 <Hit>
   <Hit_num>1</Hit_num>
-  <Hit_id>YPL176C_AWRI1631</Hit_id>
-  <Hit_def>TRE1 ORF Verified [Sc strain AWRI1631] Plasma membrane protein that binds to Bsd2p and regulates ubiquitylation and vacuolar degradation of the metal transporter Smf1p; function is redundant with that of Tre2p; has similarity to transferrin receptors</Hit_def>
-  <Hit_accession>YPL176C_AWRI1631</Hit_accession>
-  <Hit_len>2352</Hit_len>
+  <Hit_id>YML025C_AWRI1631</Hit_id>
+  <Hit_def>YML6 ORF Verified [Sc strain AWRI1631] Mitochondrial ribosomal protein of the large subunit, has similarity to E. coli L4 ribosomal protein and human mitoribosomal MRP-L4 protein; essential for viability, unlike most other mitoribosomal proteins</Hit_def>
+  <Hit_accession>YML025C_AWRI1631</Hit_accession>
+  <Hit_len>861</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -39,26 +39,26 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>587</Hsp_hit-from>
-      <Hsp_hit-to>596</Hsp_hit-to>
+      <Hsp_hit-from>319</Hsp_hit-from>
+      <Hsp_hit-to>328</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
       <Hsp_hit-frame>1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>2</Hit_num>
-  <Hit_id>YJR031C_AWRI1631</Hit_id>
-  <Hit_def>GEA1 ORF Verified [Sc strain AWRI1631] Guanine nucleotide exchange factor for ADP ribosylation factors (ARFs), involved in vesicular transport between the Golgi and ER, Golgi organization, and actin cytoskeleton organization; similar to but not functionally redundant with Gea2p</Hit_def>
-  <Hit_accession>YJR031C_AWRI1631</Hit_accession>
-  <Hit_len>4227</Hit_len>
+  <Hit_id>YKL017C_AWRI1631</Hit_id>
+  <Hit_def>HCS1 ORF Verified [Sc strain AWRI1631] Hexameric DNA polymerase alpha-associated DNA helicase A involved in lagging strand DNA synthesis; contains single-stranded DNA stimulated ATPase and dATPase activities; replication protein A stimulates helicase and ATPase activities</Hit_def>
+  <Hit_accession>YKL017C_AWRI1631</Hit_accession>
+  <Hit_len>2052</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -67,26 +67,26 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>3039</Hsp_hit-from>
-      <Hsp_hit-to>3048</Hsp_hit-to>
+      <Hsp_hit-from>1368</Hsp_hit-from>
+      <Hsp_hit-to>1377</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
       <Hsp_hit-frame>1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>3</Hit_num>
-  <Hit_id>YKL112W_AWRI1631</Hit_id>
-  <Hit_def>ABF1 ORF Verified [Sc strain AWRI1631] DNA binding protein with possible chromatin-reorganizing activity involved in transcriptional activation, gene silencing, and DNA replication and repair</Hit_def>
-  <Hit_accession>YKL112W_AWRI1631</Hit_accession>
-  <Hit_len>2196</Hit_len>
+  <Hit_id>YOL140W_AWRI1631</Hit_id>
+  <Hit_def>ARG8 ORF Verified [Sc strain AWRI1631] Acetylornithine aminotransferase, catalyzes the fourth step in the biosynthesis of the arginine precursor ornithine</Hit_def>
+  <Hit_accession>YOL140W_AWRI1631</Hit_accession>
+  <Hit_len>1272</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -95,26 +95,26 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>378</Hsp_hit-from>
-      <Hsp_hit-to>387</Hsp_hit-to>
+      <Hsp_hit-from>532</Hsp_hit-from>
+      <Hsp_hit-to>523</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>4</Hit_num>
-  <Hit_id>YKL070W_AWRI1631</Hit_id>
-  <Hit_def>ORF Uncharacterized [Sc strain AWRI1631] Putative protein of unknown function; expression induced in cells treated with mycotoxins patulin or citrinin; the authentic, non-tagged protein is detected in highly purified mitochondria in high-throughput studies</Hit_def>
-  <Hit_accession>YKL070W_AWRI1631</Hit_accession>
-  <Hit_len>510</Hit_len>
+  <Hit_id>YDR335W_AWRI1631</Hit_id>
+  <Hit_def>MSN5 ORF Verified [Sc strain AWRI1631] Karyopherin involved in nuclear import and export of proteins, including import of replication protein A and export of Swi6p, Far1p, and Pho4p; required for re-export of mature tRNAs after their retrograde import from the cytoplasm</Hit_def>
+  <Hit_accession>YDR335W_AWRI1631</Hit_accession>
+  <Hit_len>3675</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -123,26 +123,26 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>87</Hsp_hit-from>
-      <Hsp_hit-to>96</Hsp_hit-to>
+      <Hsp_hit-from>137</Hsp_hit-from>
+      <Hsp_hit-to>128</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>5</Hit_num>
-  <Hit_id>YCR016W_AWRI1631</Hit_id>
-  <Hit_def>ORF Uncharacterized [Sc strain AWRI1631] Putative protein of unknown function; green fluorescent protein (GFP)-fusion protein localizes to the nucleolus and nucleus; predicted to be involved in ribosome biogenesis</Hit_def>
-  <Hit_accession>YCR016W_AWRI1631</Hit_accession>
-  <Hit_len>873</Hit_len>
+  <Hit_id>YDR235W_AWRI1631</Hit_id>
+  <Hit_def>PRP42 ORF Verified [Sc strain AWRI1631] U1 snRNP protein involved in splicing, required for U1 snRNP biogenesis; contains multiple tetriatricopeptide repeats</Hit_def>
+  <Hit_accession>YDR235W_AWRI1631</Hit_accession>
+  <Hit_len>1635</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -151,26 +151,26 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>660</Hsp_hit-from>
-      <Hsp_hit-to>669</Hsp_hit-to>
+      <Hsp_hit-from>987</Hsp_hit-from>
+      <Hsp_hit-to>978</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>6</Hit_num>
-  <Hit_id>YBR083W_AWRI1631</Hit_id>
-  <Hit_def>TEC1 ORF Verified [Sc strain AWRI1631] Transcription factor required for full Ty1 expression, Ty1-mediated gene activation, and haploid invasive and diploid pseudohyphal growth; TEA/ATTS DNA-binding domain family member</Hit_def>
-  <Hit_accession>YBR083W_AWRI1631</Hit_accession>
-  <Hit_len>1461</Hit_len>
+  <Hit_id>YDR196C_AWRI1631</Hit_id>
+  <Hit_def>CAB5 ORF Verified [Sc strain AWRI1631] Probable dephospho-CoA kinase (DPCK) that catalyzes the last step in coenzyme A biosynthesis; null mutant lethality is complemented by E. coli coaE (encoding DPCK); detected in purified mitochondria in high-throughput studies</Hit_def>
+  <Hit_accession>YDR196C_AWRI1631</Hit_accession>
+  <Hit_len>726</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -179,72 +179,16 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>1008</Hsp_hit-from>
-      <Hsp_hit-to>1017</Hsp_hit-to>
-      <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>1</Hsp_hit-frame>
-      <Hsp_identity>10</Hsp_identity>
-      <Hsp_positive>10</Hsp_positive>
-      <Hsp_gaps>0</Hsp_gaps>
-      <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
-      <Hsp_midline>||||||||||</Hsp_midline>
-    </Hsp>
-  </Hit_hsps>
-</Hit>
-<Hit>
-  <Hit_num>7</Hit_num>
-  <Hit_id>YMR311C_AWRI1631</Hit_id>
-  <Hit_def>GLC8 ORF Verified [Sc strain AWRI1631] Regulatory subunit of protein phosphatase 1 (Glc7p), involved in glycogen metabolism and chromosome segregation; proposed to regulate Glc7p activity via conformational alteration; ortholog of the mammalian protein phosphatase inhibitor 2</Hit_def>
-  <Hit_accession>YMR311C_AWRI1631</Hit_accession>
-  <Hit_len>690</Hit_len>
-  <Hit_hsps>
-    <Hsp>
-      <Hsp_num>1</Hsp_num>
-      <Hsp_bit-score>20.3164</Hsp_bit-score>
-      <Hsp_score>10</Hsp_score>
-      <Hsp_evalue>8.16426</Hsp_evalue>
-      <Hsp_query-from>1</Hsp_query-from>
-      <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>33</Hsp_hit-from>
-      <Hsp_hit-to>24</Hsp_hit-to>
+      <Hsp_hit-from>649</Hsp_hit-from>
+      <Hsp_hit-to>640</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
       <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
-      <Hsp_midline>||||||||||</Hsp_midline>
-    </Hsp>
-  </Hit_hsps>
-</Hit>
-<Hit>
-  <Hit_num>8</Hit_num>
-  <Hit_id>YGR158C_AWRI1631</Hit_id>
-  <Hit_def>MTR3 ORF Verified [Sc strain AWRI1631] Exosome non-catalytic core component; involved in 3&apos;-5&apos; RNA processing and degradation in both the nucleus and the cytoplasm; has similarity to E. coli RNase PH and to human hMtr3p (EXOSC6)</Hit_def>
-  <Hit_accession>YGR158C_AWRI1631</Hit_accession>
-  <Hit_len>753</Hit_len>
-  <Hit_hsps>
-    <Hsp>
-      <Hsp_num>1</Hsp_num>
-      <Hsp_bit-score>20.3164</Hsp_bit-score>
-      <Hsp_score>10</Hsp_score>
-      <Hsp_evalue>8.16426</Hsp_evalue>
-      <Hsp_query-from>1</Hsp_query-from>
-      <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>540</Hsp_hit-from>
-      <Hsp_hit-to>531</Hsp_hit-to>
-      <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>-1</Hsp_hit-frame>
-      <Hsp_identity>10</Hsp_identity>
-      <Hsp_positive>10</Hsp_positive>
-      <Hsp_gaps>0</Hsp_gaps>
-      <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>TAAGGCTAGC</Hsp_qseq>
-      <Hsp_hseq>TAAGGCTAGC</Hsp_hseq>
+      <Hsp_qseq>CCCCAAAAGG</Hsp_qseq>
+      <Hsp_hseq>CCCCAAAAGG</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>

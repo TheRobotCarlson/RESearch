@@ -1,22 +1,33 @@
 
-def encode(ByteArray):
-    DNAString = ''
-    for byte in ByteArray:
-        nucleobaseGroup = ''
-        #int.from_bytes(b'y\xcc\xa6\xbb', byteorder='big')
+# def encode(ByteArray):
+#     DNAString = ''
+#     for byte in ByteArray:
+#         nucleobaseGroup = ''
+#         #int.from_bytes(b'y\xcc\xa6\xbb', byteorder='big')
+#
+#         nucleobaseGroup = nucleobaseGroup + \
+#             bits_to_nucleobase(
+#                 (int.from_bytes(byte, byteorder='big') & 192) >> 6)
+#         nucleobaseGroup = nucleobaseGroup + \
+#             bits_to_nucleobase(
+#                 (int.from_bytes(byte, byteorder='big') & 48) >> 4)
+#         nucleobaseGroup = nucleobaseGroup + \
+#             bits_to_nucleobase(
+#                 (int.from_bytes(byte, byteorder='big') & 12) >> 2)
+#         nucleobaseGroup = nucleobaseGroup + \
+#             bits_to_nucleobase(int.from_bytes(byte, byteorder='big') & 3)
+#         DNAString = DNAString+nucleobaseGroup
+#
+#     return DNAString
 
-        nucleobaseGroup = nucleobaseGroup + \
-            bits_to_nucleobase(
-                (int.from_bytes(byte, byteorder='big') & 192) >> 6)
-        nucleobaseGroup = nucleobaseGroup + \
-            bits_to_nucleobase(
-                (int.from_bytes(byte, byteorder='big') & 48) >> 4)
-        nucleobaseGroup = nucleobaseGroup + \
-            bits_to_nucleobase(
-                (int.from_bytes(byte, byteorder='big') & 12) >> 2)
-        nucleobaseGroup = nucleobaseGroup + \
-            bits_to_nucleobase(int.from_bytes(byte, byteorder='big') & 3)
-        DNAString = DNAString+nucleobaseGroup
+
+def encode(nums):
+    DNAString = ''
+    for num in nums:
+        DNAString += bits_to_nucleobase(int(num & 192 >> 6))
+        DNAString += bits_to_nucleobase(int(num & 48 >> 4))
+        DNAString += bits_to_nucleobase(int(num & 12 >> 2))
+        DNAString += bits_to_nucleobase(int(num & 3))
 
     return DNAString
 

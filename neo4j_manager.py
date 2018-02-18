@@ -1,9 +1,11 @@
-from py2neo import Node, Relationship, Graph
+from py2neo import Node, Relationship, Graph, GraphError
 from datetime import datetime
 graph = Graph(password="pass")
 
-label_word = "tree_node"
-edge_word = "containedby"
+label_word = "node_test"
+edge_word = "contained_by"
+# label_word = "tree_node"
+# edge_word = "containedby"
 #
 # temp_node = Node("test", id="AAATG")
 # temp_node["stuff"] = "things"
@@ -84,11 +86,14 @@ def min_common_pattern(node_root, node_1, node_2):
         end_1 -= 1
         end_2 -= 1
 
+    if end_1 - beg_1 < 2:
+        return None
     return str_1[beg_1:end_1 + 1]
 
 
 def get_children(node_root, constraint=None):
     next_node = list(graph.match(start_node=node_root, rel_type=edge_word))
+    # print(next_node[0].nodes()[1])
     # these are the children, exclude this node
     if constraint is None:
         return [c.nodes()[1] for c in next_node if c.nodes()[1]["pattern"] not in node_root["pattern"]]
@@ -98,11 +103,13 @@ def get_children(node_root, constraint=None):
 
 
 def make_child(node_parent, node_child):
+    # print("make child?")
     relationship = Relationship(node_parent, edge_word, node_child)
     graph.merge(relationship)
 
 
 def make_fake_parent(node_parent, future_parent_pattern, node_children):
+    # print("here?")
     parent = Node(label_word)
     parent["pattern"] = future_parent_pattern
     parent["real_enzyme"] = False
@@ -114,7 +121,7 @@ def make_fake_parent(node_parent, future_parent_pattern, node_children):
     for child in node_children:
         if child in old_children:
             relationship = graph.match_one(start_node=node_parent, end_node=child, rel_type=edge_word)
-            graph.delete(relationship)
+            graph.separate(relationship)
         relationship = Relationship(parent, edge_word, child)
         graph.merge(relationship)
 
@@ -124,10 +131,14 @@ def make_fake_parent(node_parent, future_parent_pattern, node_children):
 # case 3: children and child is contained -> make child root, recur
 
 def insert_node_recur(node_root, node):
+    # print("here3?")
+
     search_str = node["pattern"]
+    if node_root is None:
+        return False, None
     root_str = node_root["pattern"]
 
-    children = get_children(node_root, search_str)
+    children = list(get_children(node_root))
     # print(children)
 
     # case 1
@@ -137,6 +148,8 @@ def insert_node_recur(node_root, node):
 
     sub_len = []
     for child in children:
+        if child["pattern"] == node_root["pattern"]:
+            continue
         # case 3
         if child["pattern"] in search_str:
             found = insert_node_recur(child, node)
@@ -144,6 +157,7 @@ def insert_node_recur(node_root, node):
                 return True
         else:
             match_str = min_common_pattern(node_root, node, child)
+            # if len(match_str)
             sub_len.append((len(match_str), match_str, child))
 
     # case 2
@@ -175,7 +189,7 @@ def insert_node(node):
 
 def get_enzyme_recur(dna_str_copy, node):
     if node["real_enzyme"]:
-        print(node)
+        print(node["name"])
         return True, node
 
     next_node = list(graph.match(start_node=node, rel_type=edge_word))
@@ -196,7 +210,7 @@ def get_enzyme(dna_str, pos):
     start_time = datetime.now()
     left_pos = pos
     right_pos = pos + 1
-    print(pos, len(dna_str), dna_str)
+    # print(pos, len(dna_str), dna_str)
 
     dna_str_copy = dna_str[:pos + 1] + "^" + dna_str[pos + 1:]
     str_piece_mid = dna_str[left_pos] + "^" + dna_str[right_pos]
@@ -204,7 +218,7 @@ def get_enzyme(dna_str, pos):
     str_piece_right = str_piece_mid[1:]
     next_node = graph.find_one(label=label_word, property_key="pattern", property_value=str_piece_mid)
 
-    print(str_piece_mid, next_node)
+    # print(str_piece_mid, next_node)
     found, node = get_enzyme_recur(dna_str_copy, next_node)
 
     end_time = datetime.now()
