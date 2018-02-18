@@ -27,10 +27,10 @@
 <Iteration_hits>
 <Hit>
   <Hit_num>1</Hit_num>
-  <Hit_id>YOL064C_AWRI1631</Hit_id>
-  <Hit_def>MET22 ORF Verified [Sc strain AWRI1631] Bisphosphate-3&apos;-nucleotidase, involved in salt tolerance and methionine biogenesis; dephosphorylates 3&apos;-phosphoadenosine-5&apos;-phosphate and 3&apos;-phosphoadenosine-5&apos;-phosphosulfate, intermediates of the sulfate assimilation pathway</Hit_def>
-  <Hit_accession>YOL064C_AWRI1631</Hit_accession>
-  <Hit_len>1074</Hit_len>
+  <Hit_id>YFR019W_AWRI1631</Hit_id>
+  <Hit_def>FAB1 ORF Verified [Sc strain AWRI1631] 1-phosphatidylinositol-3-phosphate 5-kinase; vacuolar membrane kinase that generates phosphatidylinositol (3,5)P2, which is involved in vacuolar sorting and homeostasis</Hit_def>
+  <Hit_accession>YFR019W_AWRI1631</Hit_accession>
+  <Hit_len>6816</Hit_len>
   <Hit_hsps>
     <Hsp>
       <Hsp_num>1</Hsp_num>
@@ -39,50 +39,22 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>984</Hsp_hit-from>
-      <Hsp_hit-to>975</Hsp_hit-to>
+      <Hsp_hit-from>4934</Hsp_hit-from>
+      <Hsp_hit-to>4925</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
       <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>CGTAGCTAGC</Hsp_qseq>
-      <Hsp_hseq>CGTAGCTAGC</Hsp_hseq>
+      <Hsp_qseq>GTAGCTAGCT</Hsp_qseq>
+      <Hsp_hseq>GTAGCTAGCT</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>
 </Hit>
 <Hit>
   <Hit_num>2</Hit_num>
-  <Hit_id>YFL040W_AWRI1631</Hit_id>
-  <Hit_def>ORF Uncharacterized [Sc strain AWRI1631] Putative transporter, member of the sugar porter family; YFL040W is not an essential gene</Hit_def>
-  <Hit_accession>YFL040W_AWRI1631</Hit_accession>
-  <Hit_len>1623</Hit_len>
-  <Hit_hsps>
-    <Hsp>
-      <Hsp_num>1</Hsp_num>
-      <Hsp_bit-score>20.3164</Hsp_bit-score>
-      <Hsp_score>10</Hsp_score>
-      <Hsp_evalue>8.16426</Hsp_evalue>
-      <Hsp_query-from>1</Hsp_query-from>
-      <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>616</Hsp_hit-from>
-      <Hsp_hit-to>607</Hsp_hit-to>
-      <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>-1</Hsp_hit-frame>
-      <Hsp_identity>10</Hsp_identity>
-      <Hsp_positive>10</Hsp_positive>
-      <Hsp_gaps>0</Hsp_gaps>
-      <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>CGTAGCTAGC</Hsp_qseq>
-      <Hsp_hseq>CGTAGCTAGC</Hsp_hseq>
-      <Hsp_midline>||||||||||</Hsp_midline>
-    </Hsp>
-  </Hit_hsps>
-</Hit>
-<Hit>
-  <Hit_num>3</Hit_num>
   <Hit_id>YIL083C_AWRI1631</Hit_id>
   <Hit_def>CAB2 ORF Verified [Sc strain AWRI1631] Probable phosphopantothenoylcysteine synthetase (PPCS), which catalyzes the second step of coenzyme A biosynthesis from pantothenate; null mutant lethality is complemented by E. coli coaBC (encoding a bifunctional enzyme with PPCS activity)</Hit_def>
   <Hit_accession>YIL083C_AWRI1631</Hit_accession>
@@ -95,16 +67,44 @@
       <Hsp_evalue>8.16426</Hsp_evalue>
       <Hsp_query-from>1</Hsp_query-from>
       <Hsp_query-to>10</Hsp_query-to>
-      <Hsp_hit-from>1092</Hsp_hit-from>
-      <Hsp_hit-to>1083</Hsp_hit-to>
+      <Hsp_hit-from>1091</Hsp_hit-from>
+      <Hsp_hit-to>1082</Hsp_hit-to>
       <Hsp_query-frame>1</Hsp_query-frame>
       <Hsp_hit-frame>-1</Hsp_hit-frame>
       <Hsp_identity>10</Hsp_identity>
       <Hsp_positive>10</Hsp_positive>
       <Hsp_gaps>0</Hsp_gaps>
       <Hsp_align-len>10</Hsp_align-len>
-      <Hsp_qseq>CGTAGCTAGC</Hsp_qseq>
-      <Hsp_hseq>CGTAGCTAGC</Hsp_hseq>
+      <Hsp_qseq>GTAGCTAGCT</Hsp_qseq>
+      <Hsp_hseq>GTAGCTAGCT</Hsp_hseq>
+      <Hsp_midline>||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>YHR111W_AWRI1631</Hit_id>
+  <Hit_def>UBA4 ORF Verified [Sc strain AWRI1631] Protein that activates Urm1p before its conjugation to proteins (urmylation); also acts in thiolation of the wobble base of cytoplasmic tRNAs by adenylating and then thiolating Urm1p; receives sulfur from Tum1p</Hit_def>
+  <Hit_accession>YHR111W_AWRI1631</Hit_accession>
+  <Hit_len>1323</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>20.3164</Hsp_bit-score>
+      <Hsp_score>10</Hsp_score>
+      <Hsp_evalue>8.16426</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>10</Hsp_query-to>
+      <Hsp_hit-from>1220</Hsp_hit-from>
+      <Hsp_hit-to>1211</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>10</Hsp_identity>
+      <Hsp_positive>10</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>10</Hsp_align-len>
+      <Hsp_qseq>GTAGCTAGCT</Hsp_qseq>
+      <Hsp_hseq>GTAGCTAGCT</Hsp_hseq>
       <Hsp_midline>||||||||||</Hsp_midline>
     </Hsp>
   </Hit_hsps>

@@ -8,7 +8,7 @@ from neo4j_manager import get_enzyme
 
 def main():
     CHUNK = 10
-    data = 'CGTAGCTAGCTAGCTAGCTAGCTAGCTGATCGATCGTAGCTAGCTAGCTGATCGATCGATCGATGCTAGCTAGCTAGCTAGTCGATC'
+    data = 'TAAGGCTAGCTAGCTAGCTAGCTAGCTGATCGATCAGCTAGCTA'
     counter = CHUNK
     end = len(data)
     dna_str = ""
@@ -20,14 +20,30 @@ def main():
         print('parsing')
         results = xml_parse()
         print('parsed')
-        results = results[0]
+
+        found = False
+        i = 0
 
         print('getting enzymes...')
-        (bp_left, name_left) = get_enzyme(results.gene, results.hit_from)
-        (bp_right, name_right) = get_enzyme(results.gene, results.hit_to)
-        print('got enzymes')
-        print('Enzymes:\n  ' + name_left + '\n  ' + name_right)
-        dna_str += results[0].hseq
+        while not found and i < len(results):
+            result = results[i]
+
+            (bp_left, name_left) = get_enzyme(result.gene, result.hit_to)
+            (bp_right, name_right) = get_enzyme(result.gene, result.hit_from)
+
+            if name_left is None or name_right is None:
+                i += 1
+                continue
+            else:
+                found = True
+
+        if found:
+            print('got enzymes')
+            print('Enzymes:\n  ' + name_left + '\n  ' + name_right)
+            dna_str += results[i].hseq
+        else:
+            print("failed to find enzymes at this time")
+            break
 
         counter += CHUNK
     print(dna_str)
@@ -71,7 +87,7 @@ def fasta_parse(seq_id, fasta_path):
     entry_str = [entry for entry in fasta_entries if seq_id in entry][0]
 
     seq_lines = entry_str.split('\n')
-    entry_seq = "".join(seq_lines[2:])
+    entry_seq = "".join(seq_lines[1:])
 
     return entry_seq
 

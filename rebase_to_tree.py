@@ -5,7 +5,7 @@ def expand(root,graph):
     maxleft=5
     maxright=5
     #if root in DB
-    query = graph.find_one("rebase_enzyme",property_key="pattern",property_value=root["pattern"])
+    query = graph.find_one("rebase_enzyme", property_key="pattern",property_value=root["pattern"])
     if query:
 
         root["real_enzyme"]=True

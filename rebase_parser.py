@@ -4,6 +4,8 @@ from time import sleep
 from datetime import datetime
 import re
 
+from neo4j_manager import insert_node, label_word
+
 # M = A or C
 # W = A or T
 # H = not G (A or C or T)
@@ -74,7 +76,8 @@ def expand_seqs(dna_entry):
             continue
         else:
             seqs_location.append(i)
-
+    # if len(seqs_location) > 5:
+    #     return []
     for i in seqs_location:
         expanded_seqs_list = []
         for item in expanded_seqs:
@@ -90,7 +93,15 @@ def expand_seqs(dna_entry):
 
 
 graph = Graph(password="pass")
-graph.schema.create_uniqueness_constraint("rebase_enzyme", "pattern")
+# graph.schema.create_uniqueness_constraint(label_word, "pattern")
+
+# pairs = ['A^A', 'A^C', 'A^G', 'A^T', 'C^A', 'C^C', 'C^G', 'C^T',
+#          'G^A', 'G^C', 'G^G', 'G^T', 'T^A', 'T^C', 'T^G', 'T^T']
+# for pair in pairs:
+#     parent = Node(label_word)
+#     parent["pattern"] = pair
+#     parent["real_enzyme"] = False
+#     graph.merge(parent)
 uniques = set()
 time_begin = datetime.now()
 
@@ -101,7 +112,7 @@ with open('data_files/allenz.txt') as input_file:
         clipped_str = temp_str[3:]
 
         if temp_str[:3] == "<1>":
-            temp_entry = Node("rebase_enzyme")
+            temp_entry = Node(label_word)
             temp_entry["name"] = clipped_str
         elif temp_str[:3] == "<5>":
             cleave_num = clipped_str.find("(")
@@ -118,6 +129,9 @@ with open('data_files/allenz.txt') as input_file:
             if "?" in clipped_str or "," in clipped_str:
                 continue
 
+            if len(clipped_str) > 10:
+                continue
+
             seq_list = expand_seqs(clipped_str)
             for seq in seq_list:
                 if seq in uniques:
@@ -125,11 +139,12 @@ with open('data_files/allenz.txt') as input_file:
                 uniques.add(seq)
                 entry_copy = deepcopy(temp_entry)
                 entry_copy["pattern"] = seq
-                entry_copy["regex"] = pattern_to_regex(seq)
+                # entry_copy["regex"] = pattern_to_regex(seq)
                 entry_copy["real_enzyme"] = True
 
                 if not graph.exists(entry_copy):
-                    graph.merge(entry_copy)
+                # graph.merge(entry_copy)
+                    insert_node(entry_copy)
 
             temp_entry = {}
 
