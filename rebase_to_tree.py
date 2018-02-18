@@ -22,6 +22,8 @@ def expand(root,graph):
             #graph.create(temp_node_left, relationship_left)
             graph.create(temp_node_left)
             graph.create(relationship_left)
+
+
             temp_node_right = Node("tree_node")
             temp_pattern_right = root["pattern"]+appendage
             temp_node_right["pattern"] = temp_pattern_right
