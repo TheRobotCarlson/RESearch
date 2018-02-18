@@ -14,8 +14,8 @@ def create_blast_database(fasta_str, save_path):
     database_filename = save_path + '_database'
 
     # creation of the makeblastdb command line
-    makeblastdb_cline = subprocess.Popen(['C:/Users/Christian/Desktop/RESearch/ncbi-blast-2.7.1+/bin/makeblastdb.exe',
-                                          '-in', save_path + 'fasta.txt', '-parse_seqids', '-dbtype', 'nucl', '-out',
+    makeblastdb_cline = subprocess.Popen(['/ncbi-blast-2.7.1+/bin/makeblastdb.exe',
+                                          '-in', save_path + 'db_fasta.txt', '-parse_seqids', '-dbtype', 'nucl', '-out',
                                           database_filename], stdout=subprocess.PIPE)
 
     # calls the makeblastdb command line and cleans up unnecessary files
@@ -43,7 +43,7 @@ def blast_n(fasta_str, save_path, database_filename):
     print(save_path)
 
     # creation of the blast command line
-    blastp_cline = subprocess.Popen(['C:/Users/Christian/Desktop/RESearch/ncbi-blast-2.7.1+/bin/blastn.exe', '-task',
+    blastp_cline = subprocess.Popen(['ncbi-blast-2.7.1+/bin/blastn.exe', '-task',
                                      'blastn-short', '-out', blast_output_file_path, '-outfmt', '5', '-query',
                                      save_path, '-db', database_filename], stdout=subprocess.PIPE)
 
