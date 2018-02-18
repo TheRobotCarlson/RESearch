@@ -50,6 +50,8 @@ pairs_second_tier = ['C^CA', 'AC^C', 'AC^G', 'C^GA']
 # def get_enzyme_recur():
 
 
+
+
 def get_enzyme(dna_str, pos):
     left_pos = pos
     right_pos = pos + 1
@@ -74,8 +76,9 @@ def get_enzyme(dna_str, pos):
 
             print(next_nodes)
 
-    # print([(x["pattern"], x["name"]) for x in next_nodes])
-    
+    print(sorted([(x["pattern"], x["name"]) for x in next_nodes], key=lambda x: len(x[0]))[0])
+
     return [(x["pattern"], x["name"]) for x in next_nodes][0]
 
-get_enzyme(dna_str="GACCTTCGAGTC", pos=6)
+# get_enzyme(dna_str="GACCTTCGAGTC", pos=6)
+
