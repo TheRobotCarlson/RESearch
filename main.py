@@ -14,8 +14,9 @@ def main():
     dna_str = ""
     print(counter, end, CHUNK)
     while counter < end + CHUNK:
-        chunk = data[counter - CHUNK:counter]
-        blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        chunk = data[counter-CHUNK:counter]
+
+        blast.blast_n(chunk, 'fasta.fsa', 'databases')
         print('parsing')
         results = xml_parse()
         print('parsed')
@@ -43,7 +44,7 @@ class Result:
 
 
 def xml_parse():
-    iters = et.parse("fasta2.xml").getroot().find(
+    iters = et.parse("fasta.xml").getroot().find(
         'BlastOutput_iterations').find('Iteration')
 
     hits = iters.find('Iteration_hits').findall('Hit')

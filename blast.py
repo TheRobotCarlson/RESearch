@@ -37,7 +37,7 @@ def blast_n(fasta_str, save_path, database_filename):
         f.close()
 
     # generate unique filename for query
-    blast_output_file_path = save_path[:-4] + '.xml'
+    blast_output_file_path = save_path[:-5] + '.xml'
 
     print(blast_output_file_path)
     print(save_path)
