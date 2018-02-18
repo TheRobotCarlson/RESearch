@@ -3,6 +3,7 @@ import re
 import blast
 import sys
 import os
+from neo4j_manager import get_enzyme
 
 
 def main():
@@ -16,21 +17,15 @@ def main():
         chunk = data[counter - CHUNK:counter]
         blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
         results = xml_parse()
+        results = results[0]
 
-        # ENZYME: (base_pair_string, name_string)
-
-        (bp, name) = get_enzyme()
-        print('Enzyme: ', end='')
-        prRed(name)
-        prCyan(' (' + bp + ')')
+        (bp_left, name_left) = get_enzyme(results.gene, results.hit_from)
+        (bp_right, name_right) = get_enzyme(results.gene, results.hit_to)
+        print('Enzymes:\n  ' + name_left + '\n  ' + name_right)
         dna_str += results[0].hseq
 
         counter += CHUNK
     print(dna_str)
-
-
-def get_enzyme():
-    pass
 
 
 class Result:
