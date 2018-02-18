@@ -90,7 +90,7 @@ def expand_seqs(dna_entry):
 
 
 graph = Graph(password="pass")
-# graph.schema.create_uniqueness_constraint("rebase_enzyme", "pattern")
+graph.schema.create_uniqueness_constraint("rebase_enzyme", "pattern")
 uniques = set()
 time_begin = datetime.now()
 
