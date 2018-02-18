@@ -8,7 +8,7 @@ from neo4j_manager import get_enzyme
 
 def main():
     CHUNK = 10
-    data = sys.stdin.read()
+    data = 'CGTAGCTAGCTAGCTAGCTAGCTAGCTGATCGATCGTAGCTAGCTAGCTGATCGATCGATCGATGCTAGCTAGCTAGCTAGTCGATC'
     data = []
     counter = CHUNK
     end = len(data)
@@ -16,11 +16,15 @@ def main():
     while counter < end + CHUNK:
         chunk = data[counter - CHUNK:counter]
         blast.blast_n(chunk, 'fasta.xml', 'AWRI1631_ABSV01000000_cds.fsa')
+        print('parsing')
         results = xml_parse()
+        print('parsed')
         results = results[0]
 
+        print('getting enzymes...')
         (bp_left, name_left) = get_enzyme(results.gene, results.hit_from)
         (bp_right, name_right) = get_enzyme(results.gene, results.hit_to)
+        print('got enzymes')
         print('Enzymes:\n  ' + name_left + '\n  ' + name_right)
         dna_str += results[0].hseq
 
