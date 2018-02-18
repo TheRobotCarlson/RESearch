@@ -76,9 +76,11 @@ def get_enzyme(dna_str, pos):
 
             print(next_nodes)
 
-    print(sorted([(x["pattern"], x["name"]) for x in next_nodes], key=lambda x: len(x[0]))[0])
+    if len(next_nodes) > 0:
+        print(sorted([(x["pattern"], x["name"]) for x in next_nodes], key=lambda x: len(x[0]))[0])
+        return [(x["pattern"], x["name"]) for x in next_nodes][0]
+    else:
+        return None
 
-    return [(x["pattern"], x["name"]) for x in next_nodes][0]
-
-# get_enzyme(dna_str="GACCTTCGAGTC", pos=6)
+# get_enzyme(dna_str="GACTTCGAGC", pos=3)
 
