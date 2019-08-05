@@ -1,8 +1,8 @@
 # Task list
 
-- [ ] ReBase parser (Brian)
+- [x] ReBase parser (Brian)
 
-- [ ] GeneBank and ReBase local storage solutions
+- [x] GeneBank and ReBase local storage solutions
 
 - [x] General binary value to DNA Encoder (David)
 
